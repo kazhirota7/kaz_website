@@ -17,7 +17,15 @@ const Hobbies = () => {
     >
       <h1 className="text-3xl font-bold mb-4">Hobbies</h1>
       <p className="mb-4">Here you can list and describe your hobbies.</p>
-      <div className="flex justify-center mb-8">
+      <div className="flex flex-col items-center mb-8">
+        <motion.div
+          className="text-sm font-bold text-white bg-black bg-opacity-50 p-1 rounded mb-2"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: isPeeled ? 0 : 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.5 }}
+        >
+          Peel here ↓
+        </motion.div>
         <motion.div
           className="relative cursor-pointer"
           onClick={handlePeel}
@@ -39,16 +47,6 @@ const Hobbies = () => {
             transition={{ duration: 0.3 }}
           >
             <p className="text-xl font-bold text-center">Peeled!</p>
-          </motion.div>
-          <motion.div
-            className="absolute top-0 right-0 p-2"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: isPeeled ? 0 : 1, x: 0 }}
-            transition={{ duration: 0.3, delay: 0.5 }}
-          >
-            <p className="text-sm font-bold text-white bg-black bg-opacity-50 p-1 rounded">
-              ← Peel here
-            </p>
           </motion.div>
         </motion.div>
       </div>
