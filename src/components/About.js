@@ -5,12 +5,13 @@ const About = () => {
   return (
     <motion.section
       id="about"
+      className="my-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.2 }}
     >
       <motion.div
-        className="profile-picture-container"
+        className="flex justify-center mb-5"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
@@ -18,16 +19,18 @@ const About = () => {
         <img 
           src={process.env.PUBLIC_URL + '/assets/profile.jpeg'} 
           alt="Profile" 
-          className="profile-picture"
+          className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg"
         />
       </motion.div>
-      <h2>About Me</h2>
+      <h2 className="text-xl font-bold mb-4 text-center">Kazuma Hirota (Kaz)</h2>
+      <h2 className="text-xl font-bold mb-4 text-center">廣田　和真</h2>
       <motion.p
+        className="text-lg pt-5 text-center"
         initial={{ x: -100 }}
         animate={{ x: 0 }}
         transition={{ type: 'spring', stiffness: 100 }}
       >
-        Your brief introduction goes here. Highlight your skills, experience, and what makes you unique.
+        I am a Software Engineer at Playstation with a Mechanical Engineering degree and research experience in Brain Computer Interfaces. I was born in Tokyo but am currently living in San Francisco.
       </motion.p>
     </motion.section>
   );
