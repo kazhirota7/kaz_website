@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Resume = () => {
   return (
     <motion.div
-      className="max-w-3xl mx-auto p-5"
+      className="max-w-3xl mx-auto p-5 text-gray-950"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
