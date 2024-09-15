@@ -9,8 +9,8 @@ import './styles/App.css';
 function App() {
   return (
     <div className="app-container">
-      <video autoPlay loop muted className="background-video">
-        <source src="/assets/autumn.mp4" type="video/mp4" />
+      <video autoPlay loop muted playsInline className="background-video">
+        <source src={process.env.PUBLIC_URL + '/assets/autumn.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <motion.div
