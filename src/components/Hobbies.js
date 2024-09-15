@@ -41,13 +41,13 @@ const Hobbies = () => {
             <p className="text-xl font-bold text-center">Peeled!</p>
           </motion.div>
           <motion.div
-            className="absolute top-0 left-0 p-2"
-            initial={{ opacity: 0, x: -20 }}
+            className="absolute top-0 right-0 p-2"
+            initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: isPeeled ? 0 : 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.5 }}
           >
             <p className="text-sm font-bold text-white bg-black bg-opacity-50 p-1 rounded">
-              Peel here ↓
+              ← Peel here
             </p>
           </motion.div>
         </motion.div>
