@@ -104,12 +104,13 @@ const Resume = () => {
             <div className="flex flex-col items-center">
               <img 
                 src={process.env.PUBLIC_URL + '/assets/lu-research.png'} 
-                alt="Playstation logo" 
-                className="h-10 my-3 object-contain"
+                alt="Lu research logo" 
+                className="h-20 my-3 object-contain"
               />
             </div>
-            <h3 className="text-xl font-semibold">Brain-Computer Interface</h3>
-            <p>Lu Research Group</p>
+            <h3 className="text-xl font-semibold">Lu Research Group</h3>
+            <p className='text-gray-500'>Brain Machine Interface • Human Computer Interface • Machine Learning • Soft Robotics</p>
+            <p>University of Texas, Austin</p>
             <p>December 2020 - May 2023</p>
             <ul className="list-disc list-inside mt-2">
               <li>Conducted research on new designs for non-invasive BCI technologies like EEG to optimize confort and longevity of data quality </li>
@@ -119,11 +120,21 @@ const Resume = () => {
             </ul>
           </ResumeEntry>
           <ResumeEntry>
-            <h3 className="text-xl font-semibold">Dean's Honor List</h3>
-            <p>University of California, Berkeley</p>
-            <p>2019 - 2022</p>
+          <div className="flex flex-col items-center">
+              <img 
+                src={process.env.PUBLIC_URL + '/assets/asu.png'} 
+                alt="ASU logo" 
+                className="h-20 my-3 object-contain"
+              />
+            </div>
+            <h3 className="text-xl font-semibold">Neuro-Symbiolic Intelligent Cyber-physical Systems Lab</h3>
+            <p className='text-gray-500'>Machine Learning • Neural Networks</p>
+            <p>Arizona State University</p>
+            <p>May 2021 - November 2021</p>
             <ul className="list-disc list-inside mt-2">
-              <li>Maintained a GPA above 3.75 for 6 consecutive semesters</li>
+              <li>Led the software development effort for a human-interpretable neural network model</li>
+              <li>Enhanced the interpretability of neural networks by using a weighted graph-based signal temporal logic</li>
+              <li>Published by IEEE Control Systems Letters</li>
             </ul>
           </ResumeEntry>
         </div>
