@@ -15,18 +15,18 @@ function App() {
     <Router>
       <div className="relative w-screen min-h-screen">
         <Header />
-        <VideoBackground>
+        <Routes>
+        <Route path="/" element={<VideoBackground>
           <motion.div
             className="max-w-7xl mx-auto p-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <Routes>
-              <Route path="/" element={<About />} />
-            </Routes>
+            <About />
           </motion.div>
-        </VideoBackground>
+        </VideoBackground>} />
+        </Routes>
         <div className="max-w-7xl mx-auto p-5">
           <Routes>
             <Route path="/" element={<ButtonSection />} />
