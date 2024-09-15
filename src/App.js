@@ -24,12 +24,7 @@ function App() {
           >
             <Header />
             <Routes>
-              <Route path="/" element={
-                <>
-                  <About />
-                  <ButtonSection />
-                </>
-              } />
+              <Route path="/" element={<About />} />
               <Route path="/resume" element={<Resume />} />
               <Route path="/hobbies" element={<Hobbies />} />
               <Route path="/thoughts" element={<Thoughts />} />
@@ -40,6 +35,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
+                <ButtonSection />
                 <Projects />
                 <Contact />
               </>
