@@ -1,6 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const ResumeEntry = ({ children }) => (
+  <motion.div
+    className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md"
+    whileHover={{ scale: 1.05 }}
+    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+  >
+    {children}
+  </motion.div>
+);
+
 const Resume = () => {
   return (
     <motion.div
@@ -14,24 +24,24 @@ const Resume = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Education</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md">
+          <ResumeEntry>
             <h3 className="text-xl font-semibold">University of Texas, Austin</h3>
             <p>B.S. in Mechanical Engineering Honors</p>
             <p>Graduation: May 2023</p>
             <p>GPA: 3.99</p>
-          </div>
-          <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md">
+          </ResumeEntry>
+          <ResumeEntry>
             <h3 className="text-xl font-semibold">Tokyo Metropolitan Kokusai High School</h3>
             <p>High School Diploma</p>
             <p>Graduation: March 2018</p>
-          </div>
+          </ResumeEntry>
         </div>
       </section>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Experience</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md">
+          <ResumeEntry>
             <h3 className="text-xl font-semibold">Software Engineer</h3>
             <p>PlayStation - San Francisco, CA</p>
             <p>June 2022 - Present</p>
@@ -40,8 +50,8 @@ const Resume = () => {
               <li>Collaborated with cross-functional teams to improve user experience</li>
               <li>Implemented performance optimizations resulting in 30% faster load times</li>
             </ul>
-          </div>
-          <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md">
+          </ResumeEntry>
+          <ResumeEntry>
             <h3 className="text-xl font-semibold">Software Engineering Intern</h3>
             <p>Google - Mountain View, CA</p>
             <p>May 2021 - August 2021</p>
@@ -50,14 +60,14 @@ const Resume = () => {
               <li>Contributed to the design and implementation of new features</li>
               <li>Participated in code reviews and agile development processes</li>
             </ul>
-          </div>
+          </ResumeEntry>
         </div>
       </section>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Research/Awards</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md">
+          <ResumeEntry>
             <h3 className="text-xl font-semibold">Brain-Computer Interface Research</h3>
             <p>UC Berkeley Neuroscience Lab</p>
             <p>January 2021 - May 2022</p>
@@ -66,15 +76,15 @@ const Resume = () => {
               <li>Published findings in the Journal of Neural Engineering</li>
               <li>Presented research at the International BCI Meeting 2022</li>
             </ul>
-          </div>
-          <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md">
+          </ResumeEntry>
+          <ResumeEntry>
             <h3 className="text-xl font-semibold">Dean's Honor List</h3>
             <p>University of California, Berkeley</p>
             <p>2019 - 2022</p>
             <ul className="list-disc list-inside mt-2">
               <li>Maintained a GPA above 3.75 for 6 consecutive semesters</li>
             </ul>
-          </div>
+          </ResumeEntry>
         </div>
       </section>
     </motion.div>
