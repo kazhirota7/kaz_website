@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className="my-10"
+      className="my-10 text-gray-800"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
@@ -21,7 +21,7 @@ const Projects = () => {
         {projects.map((project) => (
           <motion.div
             key={project.id}
-            className="bg-white bg-opacity-10 p-4 rounded-lg"
+            className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
