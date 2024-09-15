@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 const VideoBackground = ({ children }) => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
+  const [videoSrc, setVideoSrc] = useState('');
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver(entries => {
@@ -24,6 +25,18 @@ const VideoBackground = ({ children }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const getSeasonVideo = () => {
+      const month = new Date().getMonth();
+      if (month >= 2 && month <= 4) return 'spring.mp4';
+      if (month >= 5 && month <= 7) return 'summer.mp4';
+      if (month >= 8 && month <= 10) return 'autumn.mp4';
+      return 'winter.mp4';
+    };
+
+    setVideoSrc(process.env.PUBLIC_URL + '/assets/' + getSeasonVideo());
+  }, []);
+
   return (
     <div ref={containerRef} className="relative">
       <video 
@@ -34,7 +47,7 @@ const VideoBackground = ({ children }) => {
         playsInline 
         className="absolute right-0 top-0 w-full object-cover"
       >
-        <source src={process.env.PUBLIC_URL + '/assets/autumn.mp4'} type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
