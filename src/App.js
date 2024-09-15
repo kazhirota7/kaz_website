@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import Header from './components/Header';
 import About from './components/About';
 import ButtonSection from './components/ButtonSection';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Resume from './components/Resume';
 import Hobbies from './components/Hobbies';
 import Thoughts from './components/Thoughts';
@@ -30,18 +29,13 @@ function App() {
         </VideoBackground>
         <div className="max-w-7xl mx-auto p-5">
           <Routes>
-            <Route path="/" element={
-              <>
-                <ButtonSection />
-                <Projects />
-                <Contact />
-              </>
-            } />
+            <Route path="/" element={<ButtonSection />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/hobbies" element={<Hobbies />} />
             <Route path="/thoughts" element={<Thoughts />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );
