@@ -31,9 +31,9 @@ const Resume = () => {
             <p>GPA: 3.99</p>
           </ResumeEntry>
           <ResumeEntry>
-            <h3 className="text-xl font-semibold">Tokyo Metropolitan Kokusai High School</h3>
+            <h3 className="text-xl font-semibold">Jesuit College Preparatory School of Dallas</h3>
             <p>High School Diploma</p>
-            <p>Graduation: March 2018</p>
+            <p>Graduation: May 2019</p>
           </ResumeEntry>
         </div>
       </section>
