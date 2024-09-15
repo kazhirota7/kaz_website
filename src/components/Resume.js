@@ -141,6 +141,36 @@ const Resume = () => {
       </section>
 
       <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Publications</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ResumeEntry>
+            <h3 className="text-xl font-semibold">IEEE Control Systems Letters</h3>
+            <p>Human-Interpretable Neural Network Control via Signal Temporal Logic</p>
+            <p>May 2022</p>
+            <div className="mt-2 h-64 w-full">
+              <iframe
+                src="https://ieeexplore.ieee.org/document/9785776"
+                title="IEEE Publication"
+                className="w-full h-full border-0"
+              ></iframe>
+            </div>
+          </ResumeEntry>
+          <ResumeEntry>
+            <h3 className="text-xl font-semibold">9th International Conference on Construction Engineering and Project Management</h3>
+            <p>Benchmarking Construction Projects Using Machine Learning</p>
+            <p>October 2022</p>
+            <div className="mt-2 h-64 w-full">
+              <iframe
+                src="https://www.researchgate.net/publication/364772208_Benchmarking_Construction_Projects_Using_Machine_Learning"
+                title="ResearchGate Publication"
+                className="w-full h-full border-0"
+              ></iframe>
+            </div>
+          </ResumeEntry>
+        </div>
+      </section>
+
+      <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Awards</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ResumeEntry>
