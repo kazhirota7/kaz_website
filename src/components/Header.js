@@ -17,7 +17,7 @@ const Header = () => {
       transition={{ type: 'spring', stiffness: 120 }}
     >
       <motion.div
-        className="bg-gray-800 rounded-full p-2 m-4 cursor-pointer"
+        className="bg-opacity-70 bg-gray-600 rounded-full p-2 m-4 cursor-pointer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={toggleExpand}
@@ -34,7 +34,7 @@ const Header = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
-            className="bg-gray-800 p-4 rounded-lg mt-2 ml-4"
+            className="bg-gray-600 p-4 rounded-lg mt-2 ml-4 bg-opacity-70"
           >
             <ul className="space-y-2">
               <motion.li whileHover={{ scale: 1.1 }}><Link to="/" className="text-white hover:text-gray-300" onClick={toggleExpand}>Home</Link></motion.li>

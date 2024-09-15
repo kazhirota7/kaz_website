@@ -15,7 +15,7 @@ const Hobbies = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="flex items-center mb-8">
+      <div className="flex items-center my-10">
         <motion.div
           className="relative cursor-pointer"
           onClick={handlePeel}
@@ -30,16 +30,16 @@ const Hobbies = () => {
           </motion.div>
           <motion.img
             src={process.env.PUBLIC_URL + '/assets/vu-banana.png'}
-            alt="Vu Banana"
+            alt="VU Banana"
             className="w-full h-full object-cover"
             initial={{ rotate: 0 }}
             animate={{ 
               rotate: isPeeled ? -75 : 0,
               x: isPeeled ? -250 : 0,
               y: isPeeled ? -150 : 0,
-              scale: isPeeled ? 1 : 0.7,
+              scale: isPeeled ? 1 : 0.6,
             }}
-            transition={{ type: 'spring', stiffness: 120, damping: 15 }}
+            transition={{ type: 'spring', stiffness: 120, damping: 15, delay: isPeeled ? 0 : 0.1  }}
           />
           <motion.div
             className="absolute inset-0 flex flex-col items-center justify-center"
@@ -48,7 +48,7 @@ const Hobbies = () => {
             transition={{ duration: 0.3, delay: isPeeled ? 0.5 : 0 }}
           >
             <motion.div
-              className="w-full mb-2"
+              className="mb-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -57,7 +57,7 @@ const Hobbies = () => {
               </div>
             </motion.div>
             <motion.div
-              className="w-full"
+              className=""
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
