@@ -17,7 +17,7 @@ function App() {
       <div className="relative w-screen min-h-screen">
         <VideoBackground>
           <motion.div
-            className="max-w-7xl mx-auto p-5 bg-black bg-opacity-50"
+            className="max-w-7xl mx-auto p-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}

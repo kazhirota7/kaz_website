@@ -37,6 +37,7 @@ const VideoBackground = ({ children }) => {
         <source src={process.env.PUBLIC_URL + '/assets/autumn.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="relative z-10">
         {children}
       </div>
