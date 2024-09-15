@@ -22,11 +22,10 @@ const ButtonSection = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Link
-            to={button.path}
-            className="bg-blue-500 text-white py-2 px-4 rounded shadow-md hover:bg-blue-600 transition duration-300"
-          >
-            {button.title}
+          <Link to={button.path}>
+            <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md text-gray-800 hover:bg-opacity-100 transition duration-300">
+              <h3 className="text-xl font-semibold">{button.title}</h3>
+            </div>
           </Link>
         </motion.div>
       ))}
