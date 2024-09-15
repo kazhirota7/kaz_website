@@ -19,7 +19,7 @@ const Hobbies = () => {
       <p className="mb-4">Here you can list and describe your hobbies.</p>
       <div className="flex justify-center mb-8">
         <motion.div
-          className="relative w-64 h-64 cursor-pointer"
+          className="relative cursor-pointer"
           onClick={handlePeel}
           animate={{ rotateY: isPeeled ? 180 : 0 }}
           transition={{ duration: 0.6, type: 'spring' }}
