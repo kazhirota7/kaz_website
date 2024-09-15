@@ -156,13 +156,26 @@ const Resume = () => {
             </div>
           </ResumeEntry>
           <ResumeEntry>
-            <h3 className="text-xl font-semibold">9th International Conference on Construction Engineering and Project Management</h3>
-            <p>Benchmarking Construction Projects Using Machine Learning</p>
-            <p>October 2022</p>
+            <h3 className="text-xl font-semibold">Incorporating Machine Learning into a Data Warehouse for
+            Real-Time Construction Projects Benchmarking 9th International Conference on Construction Engineering and Project Management</h3>
+            <p>ICCEPM 2022</p>
+            <p>June 2022</p>
             <div className="mt-2 h-64 w-full">
               <iframe
-                src="https://www.researchgate.net/publication/364772208_Benchmarking_Construction_Projects_Using_Machine_Learning"
-                title="ResearchGate Publication"
+                src="/assets/cii-publication.pdf"
+                title="ICCEPM Publication"
+                className="w-full h-full border-0"
+              ></iframe>
+            </div>
+          </ResumeEntry>
+          <ResumeEntry>
+            <h3 className="text-xl font-semibold">Robust, Compact Forehead EEG with E-Tattoo Electrodes</h3>
+            <p>Longhorn Research Poster Session</p>
+            <p>April 2022</p>
+            <div className="mt-2 h-64 w-full">
+              <iframe
+                src="/assets/lrps-poster.pdf"
+                title="ICCEPM Publication"
                 className="w-full h-full border-0"
               ></iframe>
             </div>
