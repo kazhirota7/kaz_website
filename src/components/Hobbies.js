@@ -42,12 +42,25 @@ const Hobbies = () => {
             transition={{ type: 'spring', stiffness: 120, damping: 15 }}
           />
           <motion.div
-            className="absolute inset-0 flex items-center justify-center"
+            className="absolute inset-0 flex flex-col items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: isPeeled ? 1 : 0 }}
             transition={{ duration: 0.3, delay: isPeeled ? 0.5 : 0 }}
           >
-            <p className="text-xl font-bold text-center text-gray-900">Peeled!</p>
+            <motion.button
+              className="bg-blue-500 text-white py-2 px-4 rounded mb-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Music
+            </motion.button>
+            <motion.button
+              className="bg-green-500 text-white py-2 px-4 rounded"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Cooking
+            </motion.button>
           </motion.div>
         </motion.div>
       </div>
