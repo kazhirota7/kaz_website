@@ -15,18 +15,16 @@ const Hobbies = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className="text-3xl font-bold mb-4">Hobbies</h1>
-      <p className="mb-4">Here you can list and describe your hobbies.</p>
       <div className="flex items-center mb-8">
         <motion.div
-          className="relative cursor-pointer w-64 h-64"
+          className="relative cursor-pointer"
           onClick={handlePeel}
         >
           <motion.div
-            className="absolute -right-24 top-1/2 transform -translate-y-1/2 text-sm font-bold text-white bg-black bg-opacity-50 p-1 rounded"
+            className="absolute -right-5 top-1/2 transform -translate-y-1/2 text-sm font-bold text-gray-950"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: isPeeled ? 0 : 1, x: 0 }}
-            transition={{ duration: 0.3, delay: 0.5 }}
+            transition={{ duration: 0.3, delay: 0 }}
           >
             ← Peel here
           </motion.div>
@@ -36,20 +34,20 @@ const Hobbies = () => {
             className="w-full h-full object-cover"
             initial={{ rotate: 0 }}
             animate={{ 
-              rotate: isPeeled ? -15 : 0,
-              x: isPeeled ? -50 : 0,
-              y: isPeeled ? -50 : 0,
-              scale: isPeeled ? 0.8 : 1,
+              rotate: isPeeled ? -75 : 0,
+              x: isPeeled ? -250 : 0,
+              y: isPeeled ? -150 : 0,
+              scale: isPeeled ? 1 : 0.7,
             }}
-            transition={{ type: 'spring', stiffness: 100, damping: 10 }}
+            transition={{ type: 'spring', stiffness: 120, damping: 15 }}
           />
           <motion.div
-            className="absolute inset-0 bg-yellow-300 flex items-center justify-center"
+            className="absolute inset-0 flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: isPeeled ? 1 : 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3, delay: isPeeled ? 0.5 : 0 }}
           >
-            <p className="text-xl font-bold text-center">Peeled!</p>
+            <p className="text-xl font-bold text-center text-gray-900">Peeled!</p>
           </motion.div>
         </motion.div>
       </div>
