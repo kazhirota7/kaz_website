@@ -47,20 +47,24 @@ const Hobbies = () => {
             animate={{ opacity: isPeeled ? 1 : 0 }}
             transition={{ duration: 0.3, delay: isPeeled ? 0.5 : 0 }}
           >
-            <motion.button
-              className="bg-blue-500 text-white py-2 px-4 rounded mb-2"
+            <motion.div
+              className="w-full mb-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Music
-            </motion.button>
-            <motion.button
-              className="bg-green-500 text-white py-2 px-4 rounded"
+              <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md text-gray-800 hover:bg-opacity-100 transition duration-300 text-center">
+                <h3 className="text-xl font-semibold">Music</h3>
+              </div>
+            </motion.div>
+            <motion.div
+              className="w-full"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Cooking
-            </motion.button>
+              <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md text-gray-800 hover:bg-opacity-100 transition duration-300 text-center">
+                <h3 className="text-xl font-semibold">Cooking</h3>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
