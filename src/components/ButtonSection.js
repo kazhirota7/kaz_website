@@ -11,24 +11,27 @@ const ButtonSection = () => {
 
   return (
     <motion.section
-      className="my-10 flex justify-center space-x-4"
+      className="my-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
     >
-      {buttons.map((button) => (
-        <motion.div
-          key={button.title}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Link to={button.path}>
-            <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md text-gray-800 hover:bg-opacity-100 transition duration-300">
-              <h3 className="text-xl font-semibold">{button.title}</h3>
-            </div>
-          </Link>
-        </motion.div>
-      ))}
+      <div className="grid grid-cols-3 gap-4">
+        {buttons.map((button) => (
+          <motion.div
+            key={button.title}
+            className="w-full"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link to={button.path} className="block w-full">
+              <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md text-gray-800 hover:bg-opacity-100 transition duration-300 text-center">
+                <h3 className="text-xl font-semibold">{button.title}</h3>
+              </div>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
     </motion.section>
   );
 };
