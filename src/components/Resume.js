@@ -144,12 +144,12 @@ const Resume = () => {
         <h2 className="text-2xl font-semibold mb-4">Publications</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ResumeEntry>
-            <h3 className="text-xl font-semibold">IEEE Control Systems Letters</h3>
-            <p>Human-Interpretable Neural Network Control via Signal Temporal Logic</p>
-            <p>May 2022</p>
+            <h3 className="text-xl font-semibold">Weighted Graph-Based Signal Temporal Logic Inference Using Neural Networks</h3>
+            <p>IEEE Control Systems Letters</p>
+            <p>December 2021</p>
             <div className="mt-2 h-64 w-full">
               <iframe
-                src="https://ieeexplore.ieee.org/document/9785776"
+                src="https://ieeexplore.ieee.org/document/9662049"
                 title="IEEE Publication"
                 className="w-full h-full border-0"
               ></iframe>
