@@ -25,9 +25,6 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<About />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/hobbies" element={<Hobbies />} />
-              <Route path="/thoughts" element={<Thoughts />} />
             </Routes>
           </motion.div>
         </VideoBackground>
@@ -40,6 +37,9 @@ function App() {
                 <Contact />
               </>
             } />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/hobbies" element={<Hobbies />} />
+            <Route path="/thoughts" element={<Thoughts />} />
           </Routes>
         </div>
       </div>
