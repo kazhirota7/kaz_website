@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 const Header = () => {
   return (
     <motion.header
+      className="flex justify-between items-center py-5"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 120 }}
     >
-      <h1 style={{ color: '#fff' }}>Kazuma Hirota (Kaz)</h1>
       <nav>
-        <ul>
-          <motion.li whileHover={{ scale: 1.1 }}><a href="#about" style={{ color: '#fff' }}>About</a></motion.li>
-          <motion.li whileHover={{ scale: 1.1 }}><a href="#projects" style={{ color: '#fff' }}>Projects</a></motion.li>
-          <motion.li whileHover={{ scale: 1.1 }}><a href="#contact" style={{ color: '#fff' }}>Contact</a></motion.li>
+        <ul className="flex space-x-4">
+          <motion.li whileHover={{ scale: 1.1 }}><a href="#about" className="text-white hover:text-gray-300">About</a></motion.li>
+          <motion.li whileHover={{ scale: 1.1 }}><a href="#projects" className="text-white hover:text-gray-300">Projects</a></motion.li>
+          <motion.li whileHover={{ scale: 1.1 }}><a href="#contact" className="text-white hover:text-gray-300">Contact</a></motion.li>
         </ul>
       </nav>
     </motion.header>
