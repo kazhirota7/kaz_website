@@ -15,9 +15,10 @@ const Resume = () => {
         <h2 className="text-2xl font-semibold mb-4">Education</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold">University of California, Berkeley</h3>
-            <p>B.S. in Mechanical Engineering</p>
-            <p>Graduation: May 2022</p>
+            <h3 className="text-xl font-semibold">University of Texas, Austin</h3>
+            <p>B.S. in Mechanical Engineering Honors</p>
+            <p>Graduation: May 2023</p>
+            <p>GPA: 3.99</p>
           </div>
           <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold">Tokyo Metropolitan Kokusai High School</h3>
