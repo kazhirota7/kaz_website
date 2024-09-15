@@ -167,6 +167,13 @@ const Resume = () => {
                 className="w-full h-full border-0"
               ></iframe>
             </div>
+            <a 
+              href="/assets/cii-publication.pdf" 
+              download 
+              className="mt-2 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+            >
+              Download PDF
+            </a>
           </ResumeEntry>
           <ResumeEntry>
             <h3 className="text-xl font-semibold">Robust, Compact Forehead EEG with E-Tattoo Electrodes</h3>
@@ -179,6 +186,13 @@ const Resume = () => {
                 className="w-full h-full border-0"
               ></iframe>
             </div>
+            <a 
+              href="/assets/lrps-poster.pdf" 
+              download 
+              className="mt-2 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+            >
+              Download PDF
+            </a>
           </ResumeEntry>
         </div>
       </section>
