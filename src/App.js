@@ -16,26 +16,32 @@ function App() {
     <Router>
       <div className="relative w-screen min-h-screen">
         <Header />
-        <Routes>
-          <Route path="/" element={
-            <VideoBackground>
-              <motion.div
-                className="max-w-7xl mx-auto p-5"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <About />
+        <VideoBackground>
+          <motion.div
+            className="max-w-7xl mx-auto p-5"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Routes>
+              <Route path="/" element={<About />} />
+            </Routes>
+          </motion.div>
+        </VideoBackground>
+        <div className="max-w-7xl mx-auto p-5">
+          <Routes>
+            <Route path="/" element={
+              <>
                 <ButtonSection />
                 <Projects />
                 <Contact />
-              </motion.div>
-            </VideoBackground>
-          } />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/hobbies" element={<Hobbies />} />
-          <Route path="/thoughts" element={<Thoughts />} />
-        </Routes>
+              </>
+            } />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/hobbies" element={<Hobbies />} />
+            <Route path="/thoughts" element={<Thoughts />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
