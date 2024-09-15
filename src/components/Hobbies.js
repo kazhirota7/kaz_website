@@ -19,10 +19,8 @@ const Hobbies = () => {
       <p className="mb-4">Here you can list and describe your hobbies.</p>
       <div className="flex items-center mb-8">
         <motion.div
-          className="relative cursor-pointer"
+          className="relative cursor-pointer w-64 h-64"
           onClick={handlePeel}
-          animate={{ rotateY: isPeeled ? 180 : 0 }}
-          transition={{ duration: 0.6, type: 'spring' }}
         >
           <motion.div
             className="absolute -right-24 top-1/2 transform -translate-y-1/2 text-sm font-bold text-white bg-black bg-opacity-50 p-1 rounded"
@@ -36,9 +34,14 @@ const Hobbies = () => {
             src={process.env.PUBLIC_URL + '/assets/vu-banana.png'}
             alt="Vu Banana"
             className="w-full h-full object-cover"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: isPeeled ? 0 : 1 }}
-            transition={{ duration: 0.3 }}
+            initial={{ rotate: 0 }}
+            animate={{ 
+              rotate: isPeeled ? -15 : 0,
+              x: isPeeled ? -50 : 0,
+              y: isPeeled ? -50 : 0,
+              scale: isPeeled ? 0.8 : 1,
+            }}
+            transition={{ type: 'spring', stiffness: 100, damping: 10 }}
           />
           <motion.div
             className="absolute inset-0 bg-yellow-300 flex items-center justify-center"
