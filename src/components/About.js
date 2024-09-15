@@ -24,6 +24,34 @@ const About = () => {
       </motion.div>
       <h2 className="text-xl font-bold mb-4 text-center">Kazuma Hirota (Kaz)</h2>
       <h2 className="text-xl font-bold mb-4 text-center">廣田　和真</h2>
+      <div className="flex justify-center space-x-4 mb-4">
+        <motion.a
+          href="https://github.com/yourgithubusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <img 
+            src={process.env.PUBLIC_URL + '/assets/github-logo.png'} 
+            alt="GitHub" 
+            className="w-8 h-8"
+          />
+        </motion.a>
+        <motion.a
+          href="https://www.linkedin.com/in/yourlinkedinusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <img 
+            src={process.env.PUBLIC_URL + '/assets/linkedin-logo.png'} 
+            alt="LinkedIn" 
+            className="w-8 h-8"
+          />
+        </motion.a>
+      </div>
       <motion.p
         className="text-lg pt-5 text-center"
         initial={{ x: -100 }}
