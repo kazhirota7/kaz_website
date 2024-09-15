@@ -25,11 +25,11 @@ const Resume = () => {
         <h2 className="text-2xl font-semibold mb-4">Education</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ResumeEntry>
-            <div className="flex items-center mb-2">
+            <div className="flex flex-col items-center mb-4">
               <img 
                 src={process.env.PUBLIC_URL + '/assets/ut-austin.png'} 
                 alt="University of Texas, Austin logo" 
-                className="w-12 h-12 mr-4 object-contain"
+                className="w-16 h-16 mb-2 object-contain"
               />
               <h3 className="text-xl font-semibold">University of Texas, Austin</h3>
             </div>
