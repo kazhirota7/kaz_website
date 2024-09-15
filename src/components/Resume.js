@@ -152,12 +152,13 @@ const Resume = () => {
                 src="https://ieeexplore.ieee.org/document/9662049"
                 title="IEEE Publication"
                 className="w-full h-full border-0"
+                sandbox='allow-scripts allow-modal'
               ></iframe>
             </div>
           </ResumeEntry>
           <ResumeEntry>
             <h3 className="text-xl font-semibold">Incorporating Machine Learning into a Data Warehouse for
-            Real-Time Construction Projects Benchmarking 9th International Conference on Construction Engineering and Project Management</h3>
+            Real-Time Construction Projects Benchmarking </h3>
             <p>ICCEPM 2022</p>
             <p>June 2022</p>
             <div className="mt-2 h-64 w-full">
@@ -165,15 +166,9 @@ const Resume = () => {
                 src="/assets/cii-publication.pdf"
                 title="ICCEPM Publication"
                 className="w-full h-full border-0"
+                sandbox='allow-modal'
               ></iframe>
             </div>
-            <a 
-              href="/assets/cii-publication.pdf" 
-              download 
-              className="mt-2 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
-            >
-              Download PDF
-            </a>
           </ResumeEntry>
           <ResumeEntry>
             <h3 className="text-xl font-semibold">Robust, Compact Forehead EEG with E-Tattoo Electrodes</h3>
@@ -183,16 +178,10 @@ const Resume = () => {
               <iframe
                 src="/assets/lrps-poster.pdf"
                 title="ICCEPM Publication"
+                width={50}
                 className="w-full h-full border-0"
               ></iframe>
             </div>
-            <a 
-              href="/assets/lrps-poster.pdf" 
-              download 
-              className="mt-2 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
-            >
-              Download PDF
-            </a>
           </ResumeEntry>
         </div>
       </section>
