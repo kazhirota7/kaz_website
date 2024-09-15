@@ -8,7 +8,7 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 120 }}
     >
-      <h1 style={{ color: '#fff' }}>Your Name</h1>
+      <h1 style={{ color: '#fff' }}>Kazuma Hirota (Kaz)</h1>
       <nav>
         <ul>
           <motion.li whileHover={{ scale: 1.1 }}><a href="#about" style={{ color: '#fff' }}>About</a></motion.li>
