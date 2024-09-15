@@ -17,21 +17,21 @@ const Hobbies = () => {
     >
       <h1 className="text-3xl font-bold mb-4">Hobbies</h1>
       <p className="mb-4">Here you can list and describe your hobbies.</p>
-      <div className="flex flex-col items-center mb-8">
-        <motion.div
-          className="text-sm font-bold text-white bg-black bg-opacity-50 p-1 rounded mb-2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: isPeeled ? 0 : 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.5 }}
-        >
-          Peel here ↓
-        </motion.div>
+      <div className="flex items-center mb-8">
         <motion.div
           className="relative cursor-pointer"
           onClick={handlePeel}
           animate={{ rotateY: isPeeled ? 180 : 0 }}
           transition={{ duration: 0.6, type: 'spring' }}
         >
+          <motion.div
+            className="absolute -right-24 top-1/2 transform -translate-y-1/2 text-sm font-bold text-white bg-black bg-opacity-50 p-1 rounded"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: isPeeled ? 0 : 1, x: 0 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
+          >
+            ← Peel here
+          </motion.div>
           <motion.img
             src={process.env.PUBLIC_URL + '/assets/vu-banana.png'}
             alt="Vu Banana"
