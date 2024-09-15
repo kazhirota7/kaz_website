@@ -13,28 +13,32 @@ import VideoBackground from './components/VideoBackground';
 function App() {
   return (
     <Router>
-      <div className="relative w-screen min-h-screen">
+      <div className="flex flex-col min-h-screen">
         <Header />
-        <Routes>
-        <Route path="/" element={<VideoBackground>
-          <motion.div
-            className="max-w-7xl mx-auto p-5"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <About />
-          </motion.div>
-        </VideoBackground>} />
-        </Routes>
-        <div className="max-w-7xl mx-auto p-5">
+        <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<ButtonSection />} />
+            <Route path="/" element={
+              <>
+                <VideoBackground>
+                  <motion.div
+                    className="max-w-7xl mx-auto p-5"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                  >
+                    <About />
+                  </motion.div>
+                </VideoBackground>
+                <div className="max-w-7xl mx-auto p-5">
+                  <ButtonSection />
+                </div>
+              </>
+            } />
             <Route path="/resume" element={<Resume />} />
             <Route path="/hobbies" element={<Hobbies />} />
             <Route path="/thoughts" element={<Thoughts />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
       </div>
     </Router>
