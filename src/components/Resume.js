@@ -25,7 +25,14 @@ const Resume = () => {
         <h2 className="text-2xl font-semibold mb-4">Education</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ResumeEntry>
-            <h3 className="text-xl font-semibold">University of Texas, Austin</h3>
+            <div className="flex items-center mb-2">
+              <img 
+                src={process.env.PUBLIC_URL + '/assets/ut-austin.png'} 
+                alt="University of Texas, Austin logo" 
+                className="w-12 h-12 mr-4 object-contain"
+              />
+              <h3 className="text-xl font-semibold">University of Texas, Austin</h3>
+            </div>
             <p>B.S. in Mechanical Engineering Honors</p>
             <p>Graduation: May 2023</p>
             <p>GPA: 3.99</p>
