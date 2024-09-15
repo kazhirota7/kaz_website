@@ -151,8 +151,9 @@ const Resume = () => {
               <iframe
                 src="https://ieeexplore.ieee.org/document/9662049"
                 title="IEEE Publication"
-                className="w-full h-full border-0"
+                className="w-full h-full border-0 cursor-pointer"
                 sandbox='allow-scripts allow-modal'
+                onClick={() => window.open("https://ieeexplore.ieee.org/document/9662049", "_blank")}
               ></iframe>
             </div>
           </ResumeEntry>
@@ -165,8 +166,9 @@ const Resume = () => {
               <iframe
                 src="/assets/cii-publication.pdf"
                 title="ICCEPM Publication"
-                className="w-full h-full border-0"
+                className="w-full h-full border-0 cursor-pointer"
                 sandbox='allow-modal'
+                onClick={() => window.open("/assets/cii-publication.pdf", "_blank")}
               ></iframe>
             </div>
           </ResumeEntry>
@@ -179,7 +181,8 @@ const Resume = () => {
                 src="/assets/lrps-poster.pdf"
                 title="ICCEPM Publication"
                 width={50}
-                className="w-full h-full border-0"
+                className="w-full h-full border-0 cursor-pointer"
+                onClick={() => window.open("/assets/lrps-poster.pdf", "_blank")}
               ></iframe>
             </div>
           </ResumeEntry>
