@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import Resume from './components/Resume';
 import Hobbies from './components/Hobbies';
 import Thoughts from './components/Thoughts';
+import Music from './components/Music';
+import Cooking from './components/Cooking';
 import VideoBackground from './components/VideoBackground';
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
             <Route path="/resume" element={<Resume />} />
             <Route path="/hobbies" element={<Hobbies />} />
             <Route path="/thoughts" element={<Thoughts />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/cooking" element={<Cooking />} />
           </Routes>
         </main>
         <Footer />

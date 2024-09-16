@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hobbies = () => {
   const [isPeeled, setIsPeeled] = useState(false);
@@ -47,24 +48,28 @@ const Hobbies = () => {
             animate={{ opacity: isPeeled ? 1 : 0 }}
             transition={{ duration: 0.3, delay: isPeeled ? 0 : 0.1 }}
           >
-            <motion.div
-              className="mb-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md text-gray-800 hover:bg-opacity-100 transition duration-300 text-center">
-                <h3 className="text-xl font-semibold">Music</h3>
-              </div>
-            </motion.div>
-            <motion.div
-              className=""
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md text-gray-800 hover:bg-opacity-100 transition duration-300 text-center">
-                <h3 className="text-xl font-semibold">Cooking</h3>
-              </div>
-            </motion.div>
+            <Link to="/music">
+              <motion.div
+                className="mb-2"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md text-gray-800 hover:bg-opacity-100 transition duration-300 text-center">
+                  <h3 className="text-xl font-semibold">Music</h3>
+                </div>
+              </motion.div>
+            </Link>
+            <Link to="/cooking">
+              <motion.div
+                className=""
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-md text-gray-800 hover:bg-opacity-100 transition duration-300 text-center">
+                  <h3 className="text-xl font-semibold">Cooking</h3>
+                </div>
+              </motion.div>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
