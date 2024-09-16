@@ -42,10 +42,10 @@ const Hobbies = () => {
             transition={{ type: 'spring', stiffness: 120, damping: 15, delay: isPeeled ? 0 : 0.1  }}
           />
           <motion.div
-            className="absolute inset-0 flex flex-col items-center justify-center"
+            className="absolute inset-0 flex flex-col items-end justify-center mr-10 pr-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: isPeeled ? 1 : 0 }}
-            transition={{ duration: 0.3, delay: isPeeled ? 0.5 : 0 }}
+            transition={{ duration: 0.3, delay: isPeeled ? 0 : 0.1 }}
           >
             <motion.div
               className="mb-2"
