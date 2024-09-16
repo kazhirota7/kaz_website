@@ -42,6 +42,7 @@ const Hobbies = () => {
             }}
             transition={{ type: 'spring', stiffness: 120, damping: 15, delay: isPeeled ? 0 : 0.1  }}
           />
+          {isPeeled && 
           <motion.div
             className="absolute inset-0 flex flex-col items-end justify-center mr-10 pr-10"
             initial={{ opacity: 0 }}
@@ -71,6 +72,7 @@ const Hobbies = () => {
               </motion.div>
             </Link>
           </motion.div>
+        }
         </motion.div>
       </div>
       {/* Add more hobbies content here */}
