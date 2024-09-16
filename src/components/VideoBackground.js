@@ -4,6 +4,8 @@ const VideoBackground = ({ children }) => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
   const [videoSrc, setVideoSrc] = useState('');
+  console.log("Video:", videoSrc)
+
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver(entries => {
@@ -17,6 +19,7 @@ const VideoBackground = ({ children }) => {
     if (containerRef.current) {
       resizeObserver.observe(containerRef.current);
     }
+
 
     return () => {
       if (containerRef.current) {
@@ -34,7 +37,7 @@ const VideoBackground = ({ children }) => {
       return 'winter.mp4';
     };
 
-    setVideoSrc(process.env.PUBLIC_URL + '/assets/' + getSeasonVideo());
+    setVideoSrc('/assets/' + getSeasonVideo());
   }, []);
 
   return (
@@ -48,6 +51,7 @@ const VideoBackground = ({ children }) => {
         className="absolute right-0 top-0 w-full object-cover"
       >
         <source src={videoSrc} type="video/mp4" />
+        {/* <source src={videoSrc} type="video/mp4" /> */}
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
