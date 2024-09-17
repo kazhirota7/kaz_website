@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const Music = () => {
   const playlists = [
-    { name: "Favorite Songs", id: "37i9dQZF1DXcBWIGoYBM5M" },
-    { name: "Chill Vibes", id: "37i9dQZF1DX4WYpdgoIcn6" },
-    { name: "Workout Mix", id: "37i9dQZF1DX76Wlfdnj7AP" }
+    { name: "Musique Élyséenne", id: "1Xas1jZ5gP5kahopVQKwUL" },
+    { name: "Blissful", id: "7i9KckTvcTzpE2dEs86zbt" },
+    { name: "Tokyo!", id: "2x4AuCK04cL0usBGq1qrsM" }
   ];
 
   return (
@@ -16,7 +16,10 @@ const Music = () => {
       transition={{ duration: 0.5 }}
     >
       <h1 className="text-3xl font-bold mb-8">Music</h1>
-      <p className="text-xl mb-6">Here are some of my favorite Spotify playlists:</p>
+      <p className="text-lg mb-6">I release a playlist called "Musique Élyséenne" every few days/weeks, which consists 
+        of 13 tracks that I recently discovered. The playlist I have shared on the below is a compilation of all of these 
+        playlists I have released. I also have other other playlists of music I listen to based on mood. For more music, 
+        check out my Spotify account!</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {playlists.map((playlist) => (
           <motion.div
