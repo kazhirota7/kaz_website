@@ -10,6 +10,7 @@ const RecordPlayer = () => {
       animate={{ rotate: 360 }}
       transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
     >
+      <rect width="100" height="100" fill="#A1662F" />
       <circle cx="50" cy="50" r="45" fill="#333" />
       <circle cx="50" cy="50" r="20" fill="#666" />
       <circle cx="50" cy="50" r="5" fill="#999" />
