@@ -8,11 +8,23 @@ const Music = () => {
     { name: "Tokyo!", id: "2x4AuCK04cL0usBGq1qrsM" }
   ];
 
-  const recentAlbum = {
-    name: "Midnights",
-    artist: "Taylor Swift",
-    id: "3lS1y25WAhcqJDATJK70Mq"
-  };
+  const recentAlbums = [
+    {
+      name: "Midnights",
+      artist: "Taylor Swift",
+      id: "3lS1y25WAhcqJDATJK70Mq"
+    },
+    {
+      name: "SOS",
+      artist: "SZA",
+      id: "07vw7MJZTlLWYR2EGhRHf6"
+    },
+    {
+      name: "Harry's House",
+      artist: "Harry Styles",
+      id: "5r36AJ6VOJtp00oxSkBZ5h"
+    }
+  ];
 
   return (
     <motion.div
@@ -48,23 +60,28 @@ const Music = () => {
         ))}
       </div>
       
-      <h2 className="text-2xl font-bold mb-4">Recently Listened Album</h2>
-      <motion.div
-        className="bg-white rounded-lg shadow-md overflow-hidden"
-        whileHover={{ scale: 1.05 }}
-        transition={{ type: "spring", stiffness: 300, damping: 10 }}
-      >
-        <h3 className="text-xl font-semibold p-4">{recentAlbum.name} by {recentAlbum.artist}</h3>
-        <iframe
-          src={`https://open.spotify.com/embed/album/${recentAlbum.id}`}
-          width="100%"
-          height="380"
-          frameBorder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-          title={`${recentAlbum.name} by ${recentAlbum.artist}`}
-        ></iframe>
-      </motion.div>
+      <h2 className="text-2xl font-bold mb-4">Recently Listened Albums</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {recentAlbums.map((album) => (
+          <motion.div
+            key={album.id}
+            className="bg-white rounded-lg shadow-md overflow-hidden"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+          >
+            <h3 className="text-xl font-semibold p-4">{album.name} by {album.artist}</h3>
+            <iframe
+              src={`https://open.spotify.com/embed/album/${album.id}`}
+              width="100%"
+              height="380"
+              frameBorder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+              title={`${album.name} by ${album.artist}`}
+            ></iframe>
+          </motion.div>
+        ))}
+      </div>
     </motion.div>
   );
 };
