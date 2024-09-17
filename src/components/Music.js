@@ -10,19 +10,19 @@ const Music = () => {
 
   const recentAlbums = [
     {
-      name: "Midnights",
-      artist: "Taylor Swift",
-      id: "3lS1y25WAhcqJDATJK70Mq"
+      name: "Endlessness",
+      artist: "Nala Sinephro",
+      id: "51CQQ3tQLRZlZJZ5jcpoGE"
     },
     {
-      name: "SOS",
-      artist: "SZA",
-      id: "07vw7MJZTlLWYR2EGhRHf6"
+      name: "Imaginal Disk",
+      artist: "Magdalena Bay",
+      id: "4HTy9WFTYooRjE9giTmzAF"
     },
     {
-      name: "Harry's House",
-      artist: "Harry Styles",
-      id: "5r36AJ6VOJtp00oxSkBZ5h"
+      name: "Kaputt",
+      artist: "Destroyer",
+      id: "4sVWj2lb9F8nRg57VFTaf1"
     }
   ];
 
@@ -34,6 +34,7 @@ const Music = () => {
       transition={{ duration: 0.5 }}
     >
       <h1 className="text-3xl font-bold mb-8">Music</h1>
+      <h2 className="text-2xl font-bold mb-4">Playlists</h2>
       <p className="text-lg mb-6">I release a playlist called "Musique Élyséenne" every few days/weeks, which consists 
         of 13 tracks that I recently discovered. The playlist I have shared on the below is a compilation of all of these 
         playlists I have released. I also have other other playlists of music I listen to based on mood. For more music, 
