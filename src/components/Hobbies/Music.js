@@ -34,8 +34,13 @@ const Music = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <h1 className="text-3xl font-bold mb-4">Music</h1>
+      <h2 className="text-2xl font-bold mb-4">About</h2>
       <div className="flex items-center mb-8">
-        <h1 className="text-3xl font-bold mr-4">Music</h1>
+        <p className="flex-1 text-lg mb-6 mr-5">I love music. I grew up playing the piano, but I did not develop the amount of appreciation that I 
+          have for music until college. Now, one of my favorite hobbies is visiting the record stores and picking up new vinyls to play.
+          I listen to everything from jazz, experimental hip-hop, post-rock, prog rock, dream pop, techno, (I could go on for hours).
+        </p>
         <RecordPlayer />
       </div>
       <h2 className="text-2xl font-bold mb-4">Playlists</h2>
