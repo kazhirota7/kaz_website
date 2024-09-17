@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import RecordPlayer from './RecordPlayer';
 
 const Music = () => {
   const playlists = [
@@ -33,7 +34,10 @@ const Music = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className="text-3xl font-bold mb-8">Music</h1>
+      <div className="flex items-center mb-8">
+        <h1 className="text-3xl font-bold mr-4">Music</h1>
+        <RecordPlayer />
+      </div>
       <h2 className="text-2xl font-bold mb-4">Playlists</h2>
       <p className="text-lg mb-6">I release a playlist called "Musique Élyséenne" every few days/weeks, which consists 
         of 13 tracks that I recently discovered. The playlist I have shared on the below is a compilation of all of these 
